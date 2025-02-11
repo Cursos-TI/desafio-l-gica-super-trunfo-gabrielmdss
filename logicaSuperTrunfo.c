@@ -1,43 +1,65 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    int densidadePopulacionalA = 1200, densidadePopulacionalB = 1500;
+    int areaA = 600, areaB = 550;
+    int pibA = 500000, pibB = 450000;
+    int pibPerCapitaA = 25000, pibPerCapitaB = 22000;
+    int pontosTuristicosA = 10, pontosTuristicosB = 8;
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    int superPoderA = densidadePopulacionalA + areaA + pibA + pibPerCapitaA + pontosTuristicosA;
+    int superPoderB = densidadePopulacionalB + areaB + pibB + pibPerCapitaB + pontosTuristicosB;
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    if (densidadePopulacionalA < densidadePopulacionalB) {
+        printf("A Carta A vence a Carta B com sua densidade populacional de %d\n", densidadePopulacionalA);
+    } else if (densidadePopulacionalB < densidadePopulacionalA) {
+        printf("A Carta B vence a Carta A com sua densidade populacional de %d\n", densidadePopulacionalB);
+    } else {
+        printf("As cartas têm a mesma densidade populacional de %d\n", densidadePopulacionalA);
+    }
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    if (areaA > areaB) {
+        printf("A Carta A vence a Carta B com sua área de %d Km²\n", areaA);
+    } else if (areaB > areaA) {
+        printf("A Carta B vence a Carta A com sua área de %d Km²\n", areaB);
+    } else {
+        printf("As cartas têm a mesma área de %d Km²\n", areaA);
+    }
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    if (pibA > pibB) {
+        printf("A Carta A vence a Carta B com seu PIB de R$ %d\n", pibA);
+    } else if (pibB > pibA) {
+        printf("A Carta B vence a Carta A com seu PIB de R$ %d\n", pibB);
+    } else {
+        printf("As cartas têm o mesmo PIB de R$ %d\n", pibA);
+    }
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    if (pibPerCapitaA > pibPerCapitaB) {
+        printf("A Carta A vence a Carta B com seu PIB per capita de R$ %d\n", pibPerCapitaA);
+    } else if (pibPerCapitaB > pibPerCapitaA) {
+        printf("A Carta B vence a Carta A com seu PIB per capita de R$ %d\n", pibPerCapitaB);
+    } else {
+        printf("As cartas têm o mesmo PIB per capita de R$ %d\n", pibPerCapitaA);
+    }
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    if (pontosTuristicosA > pontosTuristicosB) {
+        printf("A Carta A vence a Carta B com %d pontos turísticos\n", pontosTuristicosA);
+    } else if (pontosTuristicosB > pontosTuristicosA) {
+        printf("A Carta B vence a Carta A com %d pontos turísticos\n", pontosTuristicosB);
+    } else {
+        printf("As cartas têm a mesma quantidade de pontos turísticos: %d\n", pontosTuristicosA);
+    }
+
+    printf("\nSuper Poder da Carta A: %d\n", superPoderA);
+    printf("Super Poder da Carta B: %d\n", superPoderB);
+
+    if (superPoderA > superPoderB) {
+        printf("A Carta A vence a Carta B pelo Super Poder!\n");
+    } else if (superPoderB > superPoderA) {
+        printf("A Carta B vence a Carta A pelo Super Poder!\n");
+    } else {
+        printf("As cartas têm o mesmo Super Poder!! Empate!\n");
+    } 
 
     return 0;
 }
